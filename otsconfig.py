@@ -30,7 +30,7 @@ class Config:
             "dl_end_padding_bytes": 167,
             "max_retries": 3,
             "max_search_results": 10,
-            "media_format": "mp3",
+            "media_format": "opus",
             "force_raw": False,
             "force_premium": False,
             "chunk_size": 50000,
