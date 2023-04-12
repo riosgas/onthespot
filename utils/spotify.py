@@ -133,7 +133,7 @@ def convert_audio_format(filename, quality):
         if quality == AudioQuality.VERY_HIGH:
             bitrate = "320k"
         else:
-            bitrate = "160k"
+            bitrate = "90k"
         logger.info(f"Export media at '{filename}'")
         out_file = raw_audio.export(os.path.abspath(filename), format=config.get("media_format"), bitrate=bitrate)
         out_file.close()
