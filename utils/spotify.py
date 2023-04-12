@@ -259,13 +259,12 @@ def get_show_episodes(session, show_id_str):
 
     return episodes
 
-
-    def get_thumbnail(image_dict, preferred_size=22500):
-        images = {}
-        for image in image_dict:
-            images[image['height'] * image['width']] = image['url']
-        available_sizes = sorted(images)
-        for size in available_sizes:
-            if size >= preferred_size:
-                return images[size]
-        return images[available_sizes[-1]]
+def get_thumbnail(image_dict, preferred_size=22500):
+    images = {}
+    for image in image_dict:
+        images[image['height'] * image['width']] = image['url']
+    available_sizes = sorted(images)
+    for size in available_sizes:
+        if size >= preferred_size:
+            return images[size]
+    return images[available_sizes[-1]]
